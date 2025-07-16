@@ -49,10 +49,10 @@ const topAge = students.every(student => student.age >= 15);
 console.log("Tất cả học sinh có tuổi >= 15: ", topAge);
 
 // Tính điểm trung bình toàn bộ lớp
-const averageScores = students.map(student => {
+const avgScores = students.map(student => {
     const sum = student.scores.reduce((total, score) => total + score, 0);
     return sum / student.scores.length;
 });
-const totalOfAverages = averageScores.reduce((total, avg) => total + avg, 0);
-const classAverage = totalOfAverages / students.length;
-console.log("Điểm trung bình của cả lớp: ", classAverage);
+const totalAvg = avgScores.reduce((total, avg) => total + avg, 0);
+const classAvg = totalAvg / students.length;
+console.log("Điểm trung bình của cả lớp: ", classAvg);
